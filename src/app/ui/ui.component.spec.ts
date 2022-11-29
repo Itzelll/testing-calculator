@@ -318,7 +318,7 @@ describe('Ui division- Component', () => {
      result = component.result;
  
      // Assert
-     expect(result).toBe(4);
+     expect(result).toBe(1);
   });
 
   it('Should set operator1 model through ngModel', async() => {
@@ -361,13 +361,13 @@ describe('Ui division- Component', () => {
     divisionButton.triggerEventHandler('click', null);
 
     // Assert
-    expect(component.result).toBe(12.5);
+    expect(component.result).toBe(2);
    });
 
   it('Should render division in result div', () => {
     // Arrange
-    component.operator1 = 5;
-    component.operator2 = 5;
+    component.operator1 = 9;
+    component.operator2 = 3;
  
     // Act
     component.division();
@@ -377,6 +377,6 @@ describe('Ui division- Component', () => {
     let el : HTMLElement = de.nativeElement;
 
     // Assert
-    expect(el.innerText).toContain('25');
+    expect(el.innerText).toContain('3');
   });
 });
