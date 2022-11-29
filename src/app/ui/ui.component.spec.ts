@@ -221,7 +221,7 @@ describe('Ui multiplication - Component', () => {
      component.operator2 = 2;
  
      // Act
-     component.addition();
+     component.multiplication();
      result = component.result;
  
      // Assert
@@ -262,10 +262,10 @@ describe('Ui multiplication - Component', () => {
     // Arrange 
     component.operator1 = 5.0;
     component.operator2 = 2.5;
-    let additionButton = fixture.debugElement.query(By.css('.addition-button'));
+    let multiplicationButton = fixture.debugElement.query(By.css('.multiplication-button'));
 
     // Act
-    additionButton.triggerEventHandler('click', null);
+    multiplicationButton.triggerEventHandler('click', null);
 
     // Assert
     expect(component.result).toBe(12.5);
@@ -278,7 +278,7 @@ describe('Ui multiplication - Component', () => {
     component.operator2 = 5;
  
     // Act
-    component.addition();
+    component.multiplication();
     fixture.detectChanges();
     
     let de = fixture.debugElement.query(By.css('.result'));
