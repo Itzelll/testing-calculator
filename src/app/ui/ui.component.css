@@ -37,3 +37,7 @@
     cursor: pointer;
     color: rgb(128, 0, 0);
 }
+.division-button {
+    cursor: pointer;
+    color: rgb(207, 193, 0);
+}
